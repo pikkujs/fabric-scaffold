@@ -1,0 +1,21 @@
+{
+  "name": "@makeanagent/functions",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "imports": {
+    "#pikku/*": "./.pikku/*"
+  },
+  "scripts": {
+    "tsc": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@pikku/addon-console": "^0.12.6",
+    "@pikku/addon-workflow-screenshot": "^0.12.2",
+    "@pikku/core": "^0.12.5"
+  },
+  "devDependencies": {
+    "@types/node": "^25",
+    "typescript": "^5.9"
+  }
+}

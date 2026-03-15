@@ -1,0 +1,46 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "rootDir": ".",
+  "tsconfig": "./backend/tsconfig.json",
+  "srcDirectories": [
+    "packages/functions/src"
+  ],
+  "outDir": "packages/functions/.pikku",
+  "rpcMapDeclarationFile": "packages/functions/.pikku/rpc-map.gen.d.ts",
+  "httpMapDeclarationFile": "packages/functions/.pikku/http-map.gen.d.ts",
+  "packageMappings": {
+    "backend": "@makeanagent/server",
+    "packages/functions": "@makeanagent/functions"
+  },
+  "console": {
+    "functionsPath": "packages/functions/src/pikku/console.gen.ts"
+  },
+  "cli": {
+    "entrypoints": {
+      "makeanagent": [
+        "packages/functions/.pikku/cli/cli-local.gen.ts",
+        {
+          "type": "channel",
+          "name": "cli",
+          "route": "/cli",
+          "wirePath": "packages/functions/src/wirings/cli-channel.gen.ts",
+          "path": "packages/functions/.pikku/cli/cli-client.gen.ts"
+        }
+      ]
+    }
+  },
+  "clientFiles": {
+    "mcpJsonFile": "packages/functions/.pikku/mcp/mcp.gen.json"
+  },
+  "schema": {
+    "supportsImportAttributes": true
+  },
+  "verboseMeta": true,
+  "scaffold": {
+    "pikkuDir": "packages/functions/src/pikku",
+    "rpc": "no-auth",
+    "console": "no-auth",
+    "agent": "no-auth",
+    "workflow": "no-auth"
+  }
+}

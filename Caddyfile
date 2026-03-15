@@ -1,0 +1,25 @@
+:8080 {
+	handle /rpc/* {
+		reverse_proxy localhost:4000
+	}
+
+	handle /health-check {
+		reverse_proxy localhost:4000
+	}
+
+	handle /logs/* {
+		reverse_proxy localhost:4000
+	}
+
+	handle /cli {
+		reverse_proxy localhost:4000 {
+			flush_interval -1
+		}
+	}
+
+	handle {
+		root * /workspace/project/app/dist
+		try_files {path} /index.html
+		file_server
+	}
+}

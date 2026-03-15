@@ -1,0 +1,42 @@
+FROM node:22-trixie-slim
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl bash git supervisor procps lsof ca-certificates \
+  && rm -rf /var/lib/apt/lists/*
+
+# Install Caddy (reverse proxy to unify backend + frontend on single port)
+RUN ARCH=$(dpkg --print-architecture) && \
+    curl -fsSL "https://caddyserver.com/api/download?os=linux&arch=${ARCH}" -o /usr/local/bin/caddy && \
+    chmod +x /usr/local/bin/caddy
+
+RUN corepack enable
+ENV COREPACK_ENABLE_AUTO_PIN=0
+ENV COREPACK_ENABLE_STRICT=0
+ENV COREPACK_ENABLE_NETWORK=1
+
+# Pre-fetch yarn so corepack doesn't prompt during build
+RUN corepack prepare yarn@4.9.2 --activate
+
+WORKDIR /workspace/project
+
+# Copy the base project
+COPY . .
+
+# Install deps
+RUN yarn install
+
+RUN yarn pikku
+
+# Build frontend as static files
+RUN cd app && yarn build
+
+# Set up supervisor + caddy + entrypoint
+RUN cp supervisord.conf /etc/supervisor/conf.d/supervisord.conf \
+  && mkdir -p /etc/caddy && cp Caddyfile /etc/caddy/Caddyfile \
+  && chmod +x entrypoint.sh
+
+ENV API_PORT=4000
+EXPOSE 8080
+
+ENTRYPOINT ["/workspace/project/entrypoint.sh"]
+CMD ["supervisord", "-n", "-c", "/etc/supervisor/conf.d/supervisord.conf"]

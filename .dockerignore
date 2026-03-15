@@ -1,0 +1,5 @@
+node_modules
+.pikku
+*/node_modules
+**/node_modules
+*.log

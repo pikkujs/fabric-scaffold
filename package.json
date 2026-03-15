@@ -1,0 +1,41 @@
+{
+  "name": "makeanagent",
+  "version": "0.1.0",
+  "description": "MakeAnAgent - Built with Pikku",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "workspaces": {
+    "packages": [
+      "packages/**",
+      "app",
+      "backend",
+      "mcp-server"
+    ]
+  },
+  "scripts": {
+    "ncu:pikku": "npx npm-check-updates -f '/@pikku/.*/' -u --deep",
+    "pikku": "pikku && yarn workspaces foreach -p -A run pikku2",
+    "pikku:watch": "pikku all --watch",
+    "prebuild": "yarn run pikku bootstrap && yarn run pikku && yarn workspaces foreach -p -A run prebuild",
+    "tsc": "yarn workspaces foreach -p -A run tsc",
+    "dev": "cd backend && yarn dev",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "base:build": "flyctl deploy --app makeanagent-base --dockerfile Dockerfile.base --remote-only --build-only --push --yes --config /dev/null .",
+    "base:release": "yarn version && yarn base:build"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.4",
+    "@pikku/cli": "^0.12.6",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9"
+  },
+  "dependencies": {
+    "@pikku/core": "^0.12.5"
+  },
+  "packageManager": "yarn@4.9.2",
+  "engines": {
+    "node": ">=22"
+  }
+}
