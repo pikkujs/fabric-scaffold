@@ -20,7 +20,7 @@
     "prebuild": "yarn run pikku bootstrap && yarn run pikku && yarn workspaces foreach -p -A run prebuild",
     "tsc": "yarn workspaces foreach -p -A run tsc",
     "dev": "cd backend && yarn dev",
-    "mcp": "cd mcp-server && tsx bin/start.ts",
+    "mcp": "cd mcp-server && yarn start",
     "changeset": "changeset",
     "version": "changeset version",
     "base:build": "flyctl deploy --app makeanagent-base --dockerfile Dockerfile.base --remote-only --build-only --push --yes --config /dev/null .",
