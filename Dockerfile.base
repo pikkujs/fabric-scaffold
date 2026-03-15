@@ -22,8 +22,7 @@ WORKDIR /workspace/project
 # Copy the base project
 COPY . .
 
-# Install production deps only
-RUN yarn workspaces focus --all --production
+RUN yarn install
 
 RUN yarn pikku
 
