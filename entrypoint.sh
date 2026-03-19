@@ -3,6 +3,7 @@ set -e
 
 export API_PORT="${API_PORT:-4000}"
 export APP_PORT="${APP_PORT:-5173}"
+export CONSOLE_PORT="${CONSOLE_PORT:-51442}"
 
 cd /workspace/project
 
