@@ -886,7 +886,7 @@ __metadata:
   resolution: "@makeanagent/functions@workspace:packages/functions"
   dependencies:
     "@pikku/addon-console": "npm:^0.12.6"
-    "@pikku/addon-graph": "npm:^0.0.2"
+    "@pikku/addon-graph": "npm:^0.0.3"
     "@pikku/addon-workflow-screenshot": "npm:^0.12.2"
     "@pikku/core": "npm:^0.12.9"
     "@types/node": "npm:^25"
@@ -1052,15 +1052,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pikku/addon-graph@npm:^0.0.2":
-  version: 0.0.2
-  resolution: "@pikku/addon-graph@npm:0.0.2"
+"@pikku/addon-graph@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@pikku/addon-graph@npm:0.0.3"
   dependencies:
     dayjs: "npm:^1.11.19"
   peerDependencies:
     "@pikku/core": "*"
     zod: ^4
-  checksum: 10c0/5617893938ea0cfb34d9c4324add636b12e39a28323f7f02c72a5a1c58d6dcfd494e9e29cface06329701ba7ca396873e4affc3e0126556daaff6f0716144a94
+  checksum: 10c0/825fd78b1e91ba4545ea1d81d8297f3cd030b1aa7ba41d9da574795b591d559dae95455424595664a9efb374b19b209090961e05452bed94d74aab6bc414591e
   languageName: node
   linkType: hard
 

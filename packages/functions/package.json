@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@pikku/addon-console": "^0.12.6",
-    "@pikku/addon-graph": "^0.0.2",
+    "@pikku/addon-graph": "^0.0.3",
     "@pikku/addon-workflow-screenshot": "^0.12.2",
     "@pikku/core": "^0.12.9"
   },
