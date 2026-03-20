@@ -26,7 +26,7 @@ createRoot(document.getElementById('root')!).render(
       <ConsoleRouterProvider value={reactRouterAdapter}>
         <QueryClientProvider>
           <ThemeProvider locale="en">
-            <PikkuHTTPProvider>
+            <PikkuHTTPProvider serverUrl={window.location.origin}>
               <PikkuRPCProvider>
                 <App />
               </PikkuRPCProvider>
