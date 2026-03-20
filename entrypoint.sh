@@ -4,6 +4,7 @@ set -e
 export API_PORT="${API_PORT:-4000}"
 export APP_PORT="${APP_PORT:-5173}"
 export CONSOLE_PORT="${CONSOLE_PORT:-51442}"
+export MCP_PORT="${MCP_PORT:-3001}"
 
 cd /workspace/project
 

@@ -21,6 +21,12 @@
 		}
 	}
 
+	handle /mcp {
+		reverse_proxy localhost:{$MCP_PORT} {
+			flush_interval -1
+		}
+	}
+
 	handle {
 		root * /workspace/project/app/dist
 		try_files {path} /index.html
