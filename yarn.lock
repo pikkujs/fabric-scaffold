@@ -1000,7 +1000,7 @@ __metadata:
   resolution: "@makeanagent/app@workspace:app"
   dependencies:
     "@assistant-ui/react": "npm:^0.12.12"
-    "@pikku/assistant-ui": "npm:^0.12.1"
+    "@pikku/assistant-ui": "npm:^0.12.2"
     "@types/node": "npm:^25.3.3"
     "@types/react": "npm:^19.2.14"
     "@types/react-dom": "npm:^19.2.3"
@@ -1017,7 +1017,7 @@ __metadata:
   resolution: "@makeanagent/console@workspace:console"
   dependencies:
     "@mantine/colors-generator": "npm:^8.3.8"
-    "@pikku/console": "npm:^0.12.10"
+    "@pikku/console": "npm:^0.12.11"
     "@vitejs/plugin-react": "npm:^5.1.4"
     vite: "npm:^7.3.1"
   languageName: unknown
@@ -1030,7 +1030,7 @@ __metadata:
     "@pikku/addon-console": "npm:^0.12.6"
     "@pikku/addon-graph": "npm:^0.0.3"
     "@pikku/addon-workflow-screenshot": "npm:^0.12.2"
-    "@pikku/core": "npm:^0.12.9"
+    "@pikku/core": "npm:^0.12.10"
     "@types/node": "npm:^25"
     typescript: "npm:^5.9"
   languageName: unknown
@@ -1040,7 +1040,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@makeanagent/mcp-server@workspace:mcp-server"
   dependencies:
-    "@pikku/core": "npm:^0.12.9"
+    "@pikku/core": "npm:^0.12.10"
     "@pikku/modelcontextprotocol": "npm:^0.12.4"
   languageName: unknown
   linkType: soft
@@ -1050,7 +1050,7 @@ __metadata:
   resolution: "@makeanagent/server@workspace:backend"
   dependencies:
     "@makeanagent/functions": "workspace:*"
-    "@pikku/core": "npm:^0.12.9"
+    "@pikku/core": "npm:^0.12.10"
     "@pikku/uws": "npm:^0.12.4"
     "@types/node": "npm:^25"
     tslib: "npm:^2.8.1"
@@ -1321,16 +1321,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pikku/assistant-ui@npm:^0.12.1":
-  version: 0.12.1
-  resolution: "@pikku/assistant-ui@npm:0.12.1"
+"@pikku/assistant-ui@npm:^0.12.2":
+  version: 0.12.2
+  resolution: "@pikku/assistant-ui@npm:0.12.2"
   dependencies:
     "@assistant-ui/react": "npm:^0.12.12"
     react-markdown: "npm:^10.1.0"
   peerDependencies:
     react: ^18 || ^19
     react-dom: ^18 || ^19
-  checksum: 10c0/39f65f5926d7cf28a86d81a7c05758f33725ada50d29cffb4412c6faa49e99f21cb1daa3b5cdc4a7a78871aedb7c70e44b16531fb0cce17bd6c3f7481927d512
+  checksum: 10c0/c69eae6310279c9e308a08e9c7c9e51166044105aaced4307af0d44c17e08698b67f19a11331732ef837c78769bb3e45919a1701019e3833b5cf335f9167eb43
   languageName: node
   linkType: hard
 
@@ -1362,9 +1362,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pikku/console@npm:^0.12.10":
-  version: 0.12.10
-  resolution: "@pikku/console@npm:0.12.10"
+"@pikku/console@npm:^0.12.11":
+  version: 0.12.11
+  resolution: "@pikku/console@npm:0.12.11"
   dependencies:
     "@emotion/react": "npm:^11.14.0"
     "@mantine/core": "npm:^8.3.8"
@@ -1373,8 +1373,8 @@ __metadata:
     "@mantine/hooks": "npm:^8.3.8"
     "@mantine/notifications": "npm:^8.3.8"
     "@mantine/spotlight": "npm:^8.3.8"
-    "@pikku/assistant-ui": "npm:^0.12.1"
-    "@pikku/core": "npm:^0.12.5"
+    "@pikku/assistant-ui": "npm:^0.12.2"
+    "@pikku/core": "npm:^0.12.10"
     "@pikku/fetch": "npm:^0.12.0"
     "@rjsf/core": "npm:^6.3.1"
     "@rjsf/mantine": "npm:^6.3.1"
@@ -1401,11 +1401,23 @@ __metadata:
     react-router-dom: "npm:^7"
     reactflow: "npm:^11.11.4"
     remark-gfm: "npm:^4.0.1"
-  checksum: 10c0/9ea2f4391e1bded370f27bb33e8fa935dd5861560b257d23650e966b51ce8df144e22e166a030ee0cfb98ccb1669bbf0b02779e34a808f1884e002b0b073b742
+  checksum: 10c0/2f1996bcddf8ae372fcecd1940e51728a30560832c08eac7f9ce1c7f3d39841131353cf8fb3c7c5272d2b32ba2a2b062be91603c3498868394143d4bc1797cb7
   languageName: node
   linkType: hard
 
-"@pikku/core@npm:^0.12.5, @pikku/core@npm:^0.12.9":
+"@pikku/core@npm:^0.12.10":
+  version: 0.12.10
+  resolution: "@pikku/core@npm:0.12.10"
+  dependencies:
+    "@standard-schema/spec": "npm:^1.1.0"
+    cookie: "npm:^1.1.1"
+    path-to-regexp: "npm:^8.3.0"
+    picoquery: "npm:^2.5.0"
+  checksum: 10c0/122791b66f6303f66bf97e1c90459908f0265d48f8fe7c94f794512ebf47ee477d7d0e42eafd3267dd41b834dc2023b273571f20200d14889107ff3e21de99f9
+  languageName: node
+  linkType: hard
+
+"@pikku/core@npm:^0.12.9":
   version: 0.12.9
   resolution: "@pikku/core@npm:0.12.9"
   dependencies:
@@ -5682,7 +5694,7 @@ __metadata:
   dependencies:
     "@changesets/cli": "npm:^2.29.4"
     "@pikku/cli": "npm:^0.12.8"
-    "@pikku/core": "npm:^0.12.9"
+    "@pikku/core": "npm:^0.12.10"
     tsx: "npm:^4.21.0"
     typescript: "npm:^5.9"
   languageName: unknown

@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@mantine/colors-generator": "^8.3.8",
-    "@pikku/console": "^0.12.10"
+    "@pikku/console": "^0.12.11"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^5.1.4",
