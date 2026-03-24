@@ -1030,7 +1030,7 @@ __metadata:
     "@pikku/addon-console": "npm:^0.12.6"
     "@pikku/addon-graph": "npm:^0.0.3"
     "@pikku/addon-workflow-screenshot": "npm:^0.12.2"
-    "@pikku/core": "npm:^0.12.10"
+    "@pikku/core": "npm:^0.12.11"
     "@types/node": "npm:^25"
     typescript: "npm:^5.9"
   languageName: unknown
@@ -1040,7 +1040,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@makeanagent/mcp-server@workspace:mcp-server"
   dependencies:
-    "@pikku/core": "npm:^0.12.10"
+    "@pikku/core": "npm:^0.12.11"
     "@pikku/modelcontextprotocol": "npm:^0.12.4"
     tsx: "npm:^4.21.0"
   languageName: unknown
@@ -1051,7 +1051,7 @@ __metadata:
   resolution: "@makeanagent/server@workspace:backend"
   dependencies:
     "@makeanagent/functions": "workspace:*"
-    "@pikku/core": "npm:^0.12.10"
+    "@pikku/core": "npm:^0.12.11"
     "@pikku/uws": "npm:^0.12.4"
     "@types/node": "npm:^25"
     tslib: "npm:^2.8.1"
@@ -1335,12 +1335,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pikku/cli@npm:^0.12.8":
-  version: 0.12.8
-  resolution: "@pikku/cli@npm:0.12.8"
+"@pikku/cli@npm:^0.12.9":
+  version: 0.12.9
+  resolution: "@pikku/cli@npm:0.12.9"
   dependencies:
     "@openapi-contrib/json-schema-to-openapi-schema": "npm:^4.3.1"
-    "@pikku/core": "npm:^0.12.9"
+    "@pikku/core": "npm:^0.12.11"
     "@pikku/inspector": "npm:^0.12.4"
     "@pikku/openapi-parser": "npm:^0.12.4"
     "@types/cookie": "npm:^1.0.0"
@@ -1359,7 +1359,7 @@ __metadata:
     zod-to-ts: "npm:^2.0.0"
   bin:
     pikku: dist/bin/pikku.js
-  checksum: 10c0/33d4cde1270830a5b390a3324428ffd425713a44506a5d4fb46e412b055746539c6bbd3cac0d0115ed9e94d3f81d22c65759b1cdb5c0c69fb82cb4706cae6b09
+  checksum: 10c0/d7f8aa5131c9040a1caa39f70ead8178910ae55e836a641ccfcf6cc866ded0a0baa0ba819061ab93330b00257f1b875ab6bc9ceb8601a3f4f07fe8d482f8aef5
   languageName: node
   linkType: hard
 
@@ -1415,6 +1415,18 @@ __metadata:
     path-to-regexp: "npm:^8.3.0"
     picoquery: "npm:^2.5.0"
   checksum: 10c0/122791b66f6303f66bf97e1c90459908f0265d48f8fe7c94f794512ebf47ee477d7d0e42eafd3267dd41b834dc2023b273571f20200d14889107ff3e21de99f9
+  languageName: node
+  linkType: hard
+
+"@pikku/core@npm:^0.12.11":
+  version: 0.12.11
+  resolution: "@pikku/core@npm:0.12.11"
+  dependencies:
+    "@standard-schema/spec": "npm:^1.1.0"
+    cookie: "npm:^1.1.1"
+    path-to-regexp: "npm:^8.3.0"
+    picoquery: "npm:^2.5.0"
+  checksum: 10c0/4baa5ee8f176a6192b2e202b24bae275b8d7f136b145929b3533ae4beb1566899bc431f12cb2361111a2ab16d7542b230e4047f629e908f0dd99bc3fe51579bb
   languageName: node
   linkType: hard
 
@@ -5694,8 +5706,8 @@ __metadata:
   resolution: "makeanagent@workspace:."
   dependencies:
     "@changesets/cli": "npm:^2.29.4"
-    "@pikku/cli": "npm:^0.12.8"
-    "@pikku/core": "npm:^0.12.10"
+    "@pikku/cli": "npm:^0.12.9"
+    "@pikku/core": "npm:^0.12.11"
     tsx: "npm:^4.21.0"
     typescript: "npm:^5.9"
   languageName: unknown
