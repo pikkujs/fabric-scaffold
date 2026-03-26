@@ -32,6 +32,6 @@ jobs:
           file: Dockerfile.base
           push: true
           tags: |
-            ghcr.io/makeanagent/makeanagent-base:latest
-            ghcr.io/makeanagent/makeanagent-base:${{ steps.version.outputs.version }}
-            ghcr.io/makeanagent/makeanagent-base:${{ github.sha }}
+            ghcr.io/pikkujs/pikkufabric-base:latest
+            ghcr.io/pikkujs/pikkufabric-base:${{ steps.version.outputs.version }}
+            ghcr.io/pikkujs/pikkufabric-base:${{ github.sha }}
